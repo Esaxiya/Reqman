@@ -16,5 +16,5 @@ public interface BookService {
 
     Book get(long id);
 
-    Book getNextId();
+    long getNextId();
 }

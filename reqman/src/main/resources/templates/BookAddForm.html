@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:form="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <form action="#" th:action="@{/book_save}" th:object="${Book}" method="post">
+            <fieldset>
+                <legend>Add a book</legend>
+                <p>
+                    <label for="category">Category:</label>
+                    <select >
+                        <option th:each="cate,userStat:${categories}" th:value="${cate.id}" th:text="${cate.name}"></option>
+                    </select>
+                </p>
+                <P>
+                    <label>Title:</label>
+                    <form:input id="title" path="title"/>
+                </P>
+                <P>
+                    <label for="author">Auther:</label>
+                    <form:input id="author" path="author"/>
+                </P>
+                <P>
+                    <label></label>
+                    <input>
+                </P>
+            </fieldset>
+
+            <input type="submit" />
+        </form>
+    </div>
+</body>
+</html>

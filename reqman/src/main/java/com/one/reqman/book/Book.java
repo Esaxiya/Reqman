@@ -1,6 +1,8 @@
 package com.one.reqman.book;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.io.Serializable;
 
 @Entity
@@ -8,6 +10,7 @@ public class Book implements Serializable {
 
     private static final long SerialVersionUID=1324980719741010798L;
 
+    @Id
     private long id;
 
     private String isbn;

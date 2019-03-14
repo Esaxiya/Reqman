@@ -14,4 +14,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * JpaRepository： 继承 PagingAndSortingRepository，实现一组 JPA 规范相关的方法
  */
 public interface ReqRepository extends JpaRepository<Req,Long> {
+
 }

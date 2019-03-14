@@ -1,6 +1,5 @@
 package com.one.reqman.book;
 
-import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +30,7 @@ public class BookController {
         List<Category> categories = bookService.getAllCategories();
         model.addAttribute("categories", categories);
         model.addAttribute("book",new Book());
+        logger.info("正在请求book 添加页面");
         return "BookAddForm";
     }
     @RequestMapping("/book_edit/{id}")
@@ -59,11 +59,14 @@ public class BookController {
         return "redirect:/book_list";
     }
 
+    //    @ResponseBody
     @RequestMapping("/book_list")
     public String books(Model model){
         logger.info("book list ...");
         List<Book> books = bookService.getAllBooks();
         model.addAttribute("books",books);
+        System.out.println(model.toString());
+        //        return model.toString();
         return "BookList";
     }
 
