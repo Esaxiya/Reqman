@@ -1,7 +1,6 @@
 package com.one.reqman.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.one.reqman.book.BookController;
 import com.one.reqman.domain.Req;
 import com.one.reqman.repository.ReqRepository;
 import org.apache.commons.logging.Log;
@@ -18,7 +17,7 @@ import java.util.Optional;
 @RestController
 public class ReqController {
 
-    private static final Log logger = LogFactory.getLog(BookController.class);
+    private static final Log logger = LogFactory.getLog(ReqController.class);
 
     /**
      * 定义私有req服务层对象、支持sever业务处理、事务处理
